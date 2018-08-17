@@ -74,8 +74,38 @@ public class ResourceConfig extends WebMvcConfigurerAdapter {
 
 ## Docker
 
+### Image
+
+docker pull 下载镜像
+
+docker images 查看已下载镜像
+
+dcoker search 搜索镜像
+
+docker rmi 删除 -f 强制
+
+docker ps -a 查看正在运行的镜像
+
+### Container
+
+#### 重启 Container
+docker restart 2f29e7109f28
+
+
 ## MongoDB
 
+#### 将JAR包导入Maven 的方式
+
+```
+        <dependency>
+            <groupId>it.sauronsoftware</groupId>
+            <artifactId>jave</artifactId>
+            <version>1.0.2</version>
+            <type>jar</type>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/jave-1.0.2.jar</systemPath>
+        </dependency>
+```
 
 ## Angular
 
@@ -216,9 +246,16 @@ export class SelectSectionComponent implements ControlValueAccessor {
 
 ```
 
-
-
 ## Mysql
 
 ## Centos
 
+## Idea
+
+#### 快捷键
+
+CTRL + SHIFT + ALT + T 重构
+
+ALT + F7 查看方法引用链
+
+CTRL + SHIFT + I 查看注释

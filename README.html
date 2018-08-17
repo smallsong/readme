@@ -1076,8 +1076,18 @@ body .markdown-body
 </li>
 <li><a href="#maven">Maven</a></li>
 <li><a href="#cmder">Cmder</a></li>
-<li><a href="#docker">Docker</a></li>
-<li><a href="#mongodb">MongoDB</a></li>
+<li><a href="#docker">Docker</a><ul>
+<li><a href="#image">Image</a></li>
+<li><a href="#container">Container</a><ul>
+<li><a href="#container_1">重启 Container</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#mongodb">MongoDB</a><ul>
+<li><a href="#jarmaven">将JAR包导入Maven 的方式</a></li>
+</ul>
+</li>
 <li><a href="#angular">Angular</a><ul>
 <li><a href="#ng-cli">Ng-cli</a></li>
 <li><a href="#selectdemo">自定义Select组件DEMO</a></li>
@@ -1085,6 +1095,10 @@ body .markdown-body
 </li>
 <li><a href="#mysql">Mysql</a></li>
 <li><a href="#centos">Centos</a></li>
+<li><a href="#idea">Idea</a><ul>
+<li><a href="#_6">快捷键</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1139,7 +1153,27 @@ public class ResourceConfig extends WebMvcConfigurerAdapter {
 <h2 id="maven">Maven<a class="headerlink" href="#maven" title="Permanent link"></a></h2>
 <h2 id="cmder">Cmder<a class="headerlink" href="#cmder" title="Permanent link"></a></h2>
 <h2 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link"></a></h2>
+<h3 id="image">Image<a class="headerlink" href="#image" title="Permanent link"></a></h3>
+<p>docker pull 下载镜像</p>
+<p>docker images 查看已下载镜像</p>
+<p>dcoker search 搜索镜像</p>
+<p>docker rmi 删除 -f 强制</p>
+<p>docker ps -a 查看正在运行的镜像</p>
+<h3 id="container">Container<a class="headerlink" href="#container" title="Permanent link"></a></h3>
+<h4 id="container_1">重启 Container<a class="headerlink" href="#container_1" title="Permanent link"></a></h4>
+<p>docker restart 2f29e7109f28</p>
 <h2 id="mongodb">MongoDB<a class="headerlink" href="#mongodb" title="Permanent link"></a></h2>
+<h4 id="jarmaven">将JAR包导入Maven 的方式<a class="headerlink" href="#jarmaven" title="Permanent link"></a></h4>
+<div class="codehilite"><pre>        &lt;dependency&gt;
+            &lt;groupId&gt;it.sauronsoftware&lt;/groupId&gt;
+            &lt;artifactId&gt;jave&lt;/artifactId&gt;
+            &lt;version&gt;1.0.2&lt;/version&gt;
+            &lt;type&gt;jar&lt;/type&gt;
+            &lt;scope&gt;system&lt;/scope&gt;
+            &lt;systemPath&gt;${basedir}/lib/jave-1.0.2.jar&lt;/systemPath&gt;
+        &lt;/dependency&gt;
+</pre></div>
+
 <h2 id="angular">Angular<a class="headerlink" href="#angular" title="Permanent link"></a></h2>
 <h3 id="ng-cli">Ng-cli<a class="headerlink" href="#ng-cli" title="Permanent link"></a></h3>
 <p><a href="https://segmentfault.com/a/1190000009771946">https://segmentfault.com/a/1190000009771946</a></p>
@@ -1271,4 +1305,9 @@ export class SelectSectionComponent implements ControlValueAccessor {
 </pre></div>
 
 <h2 id="mysql">Mysql<a class="headerlink" href="#mysql" title="Permanent link"></a></h2>
-<h2 id="centos">Centos<a class="headerlink" href="#centos" title="Permanent link"></a></h2></article></body></html>
+<h2 id="centos">Centos<a class="headerlink" href="#centos" title="Permanent link"></a></h2>
+<h2 id="idea">Idea<a class="headerlink" href="#idea" title="Permanent link"></a></h2>
+<h4 id="_6">快捷键<a class="headerlink" href="#_6" title="Permanent link"></a></h4>
+<p>CTRL + SHIFT + ALT + T 重构</p>
+<p>ALT + F7 查看方法引用链</p>
+<p>CTRL + SHIFT + I 查看注释</p></article></body></html>

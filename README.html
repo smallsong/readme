@@ -1093,6 +1093,10 @@ body .markdown-body
 <li><a href="#selectdemo">自定义Select组件DEMO</a></li>
 </ul>
 </li>
+<li><a href="#linux">Linux</a><ul>
+<li><a href="#iptables">Iptables</a></li>
+</ul>
+</li>
 <li><a href="#mysql">Mysql</a></li>
 <li><a href="#centos">Centos</a></li>
 <li><a href="#idea">Idea</a><ul>
@@ -1304,6 +1308,28 @@ export class SelectSectionComponent implements ControlValueAccessor {
 }
 </pre></div>
 
+<h2 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link"></a></h2>
+<h3 id="iptables">Iptables<a class="headerlink" href="#iptables" title="Permanent link"></a></h3>
+<p>写入要开放的端口</p>
+<p>/sbin/iptables -I INPUT -p tcp &ndash;dport 3000 -j ACCEPT</p>
+<p>保存</p>
+<p>/etc/rc.d/init.d/iptables save </p>
+<p>重启防火墙</p>
+<p>/etc/init.d/iptables restart</p>
+<p>查看防火墙状态</p>
+<p>/etc/init.d/iptables status</p>
+<p>关闭防火墙</p>
+<p>/etc/init.d/iptables stop</p>
+<p>永久关闭防火墙</p>
+<p>chkconfig –level 35 iptables off</p>
+<p>查看端口运行状态</p>
+<p>netstat -nap | grep 3000</p>
+<p>查看所有开发端口</p>
+<p>netstat -ntlp</p>
+<p>查看端口占用情况命令</p>
+<p>lsof -i tcp:80</p>
+<p>杀掉占用端口的进程</p>
+<p>kill -s 9 3090</p>
 <h2 id="mysql">Mysql<a class="headerlink" href="#mysql" title="Permanent link"></a></h2>
 <h2 id="centos">Centos<a class="headerlink" href="#centos" title="Permanent link"></a></h2>
 <h2 id="idea">Idea<a class="headerlink" href="#idea" title="Permanent link"></a></h2>

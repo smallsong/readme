@@ -246,6 +246,51 @@ export class SelectSectionComponent implements ControlValueAccessor {
 
 ```
 
+## Linux
+
+### Iptables
+
+写入要开放的端口
+
+/sbin/iptables -I INPUT -p tcp --dport 3000 -j ACCEPT
+
+保存
+
+/etc/rc.d/init.d/iptables save 
+
+重启防火墙
+
+/etc/init.d/iptables restart
+
+
+查看防火墙状态
+
+/etc/init.d/iptables status
+
+关闭防火墙
+
+/etc/init.d/iptables stop
+
+永久关闭防火墙
+
+chkconfig –level 35 iptables off
+
+查看端口运行状态
+
+netstat -nap | grep 3000
+
+查看所有开发端口
+
+netstat -ntlp
+
+查看端口占用情况命令
+
+lsof -i tcp:80
+
+杀掉占用端口的进程
+
+kill -s 9 3090
+
 ## Mysql
 
 ## Centos
